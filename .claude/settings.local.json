@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/imple -type d -name \"odoo*\" 2>/dev/null | head -20)",
+      "Bash(find /c/Users/imple -type f -name \"*pricelist*.py\" 2>/dev/null | head -20)",
+      "Bash(grep -r \"_get_pricelist\\\\|get_product_price\\\\|compute_product_price\\\\|sale_price\" /c/Users/imple --include=\"*.py\" 2>/dev/null | head -20)",
+      "Bash(gh api:*)",
+      "Bash(find /c/Users/imple -type f -name \"*pricelist*\" 2>/dev/null | head -50)",
+      "Bash(find /c/Users/imple/projekt -maxdepth 2 -type f \\\\\\( -name \"README*\" -o -name \"CLAUDE*\" -o -name \"*.md\" \\\\\\) 2>/dev/null | head -10)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.odoo.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git init:*)"
+    ]
+  }
+}
