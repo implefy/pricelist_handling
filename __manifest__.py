@@ -3,6 +3,6 @@
     'version': '19.0.1.0.0',
     'depends': ['website_sale'],
     'data': ['views/product_pricelist_item_views.xml'],
-    'author': 'Implefy',
+    'author': 'Implefy AB',
     'license': 'OPL-1',
 }

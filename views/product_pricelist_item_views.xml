@@ -8,8 +8,7 @@
             <xpath expr="//label[@for='price_discount']" position="before">
                 <field name="discount_fixed_price"
                        widget="monetary"
-                       options="{'currency_field': 'currency_id'}"
-                       invisible="base == 'standard_price'"/>
+                       options='{"currency_field": "currency_id"}'/>
             </xpath>
         </field>
     </record>
