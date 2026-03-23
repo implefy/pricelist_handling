@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="pricelist_price_wizard_form" model="ir.ui.view">
+        <field name="name">pricelist.price.wizard.form</field>
+        <field name="model">pricelist.price.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Prices">
+                <field name="product_tmpl_id" invisible="1"/>
+                <field name="line_ids">
+                    <list editable="bottom">
+                        <field name="product_id" readonly="1"/>
+                        <field name="currency_id" readonly="1"/>
+                        <field name="fixed_price" widget="monetary"
+                               options='{"currency_field": "currency_id"}'/>
+                        <field name="discount_fixed_price"/>
+                        <field name="base_pricelist_id" column_invisible="True"/>
+                        <field name="discount_pricelist_id" column_invisible="True"/>
+                        <field name="base_item_id" column_invisible="True"/>
+                        <field name="discount_item_id" column_invisible="True"/>
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_apply" type="object"
+                            string="Save Prices" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
